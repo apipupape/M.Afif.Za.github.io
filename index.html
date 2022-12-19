@@ -51,7 +51,7 @@
 
     <!--jumbotron-->
     <section class="jumbotron text-center">
-      <img src="img/AFIF.jpg" alt="M. AFIF. ZA" width="180px" class="rounded-circle img-thumbnail"/>
+      <img src="img/AFIF.jpg" alt="M. AFIF. ZA" width="180px" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">M. AFIF. ZA</h1>
       <p class="lead">Saya AFIF | adalah programmer pemula di sekolah SMKN 2 BANGKALAN</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -76,14 +76,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4 mb-3" data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-easing="ease-in-sine" >
+          <div class="col-md-4 mb-3" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt esse delectus alias. Sed, quis dolore!</p>
           </div>
-          <div class="col-md-4 mb-3" data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-easing="ease-in-sine">
+          <div class="col-md-4 mb-3" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam velit voluptates aut impedit, architecto placeat?</p>
           </div>
         </div>
@@ -106,7 +102,7 @@
             <h2>My Gallery</h2>
           </div>
         </div>
-        <div class="row" >
+        <div class="row">
           <div class="col-md-4 mb-3">
             <div class="card" data-aos="zoom-in-right">
               <img src="..." class="card-img-top" alt="..." />
@@ -119,7 +115,7 @@
             <div class="card" data-aos="zoom-in-up">
               <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">hallo nama saya afif dan saya adalah seorang programmer</p>
               </div>
             </div>
           </div>
@@ -127,7 +123,7 @@
             <div class="card" data-aos="zoom-in-left">
               <img src="..." class="card-img-top" alt="..." />
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">content.</p>
               </div>
             </div>
           </div>
@@ -189,10 +185,9 @@
 
     <!--Footer-->
     <footer class="bg-success text-white text-center pb-3">
-      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/apipupape_03/?hl=en" class="text-white fw-bold" target="_blank">M.AFIF.ZA</a> </p>
+      <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/apipupape_03/?hl=en" class="text-white fw-bold" target="_blank">M.AFIF.ZA</a></p>
     </footer>
 
-    
     <!--AkhirFooter-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -206,31 +201,30 @@
       const scriptURL = "https://script.google.com/macros/s/AKfycbxJeX1YtmYd2wXSRCNjv-1PgqH6YuwNM-eq-8hxWdTa1lNCsRWWR7WjNP4wJdcyYGXOBQ/exec";
       const form = document.forms["AFIF-contact-form"];
 
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         //tombol kirim dikilik
         //tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
 
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-
             //tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
             //tampilkan alert
-            myAlert.classList.toggle('d-none')
+            myAlert.classList.toggle("d-none");
             //reset formnya
             form.reset();
-            console.log('Success!', response);
+            console.log("Success!", response);
           })
-          .catch((error) => console.error('Error!', error.message));
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
   </body>
